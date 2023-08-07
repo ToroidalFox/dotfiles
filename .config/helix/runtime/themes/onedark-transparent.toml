@@ -56,11 +56,11 @@
 "ui.virtual.ruler" = { bg = "gray" }
 "ui.virtual.inlay-hint" = { fg = "light-gray" }
 
-"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
-"ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor" = { bg = "light-gray", fg = "light-white"}
+"ui.cursor.primary" = { bg = "white", fg = "dark-black"}
 "ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
 
-"ui.selection" = { bg = "faint-gray" }
+"ui.selection" = { bg = "light-black" }
 "ui.selection.primary" = { bg = "gray" }
 "ui.cursorline.primary" = { bg = "light-black" }
 
@@ -97,10 +97,14 @@ purple = "#C678DD"
 green = "#98C379"
 gold = "#D19A66"
 cyan = "#56B6C2"
+
+linenr = "#4B5263"
+
+light-white = "#CFD7E6"
 white = "#ABB2BF"
-black = "#282C34"
-light-black = "#2C323C"
+light-gray = "#5C6370"
 gray = "#3E4452"
 faint-gray = "#3B4048"
-light-gray = "#5C6370"
-linenr = "#4B5263"
+light-black = "#2C323C"
+black = "#282C34"
+dark-black = "#0C0D0F"
