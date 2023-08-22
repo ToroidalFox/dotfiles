@@ -52,7 +52,7 @@ alias mkdir='nocorrect mkdir'
 alias ls="ls --color=auto"
 alias ll="ls --color -l"
 alias la="ls --color -a"
-alias laa="ls --color -la"
+alias lla="ls --color -la"
 alias lt="ls --sort=time"
 alias lat="ls --color -la --sort=time"
 
