@@ -11,3 +11,7 @@
   "*": "Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5666.197 Safari/537.36"
 }
 ```
+
+## Obsidian
+launch with
+`bash -c 'sed -i '\''s/"open":true/"open":false/g'\'' ~/.config/obsidian/obsidian.json; ~/Applications/Obsidian-1.3.5-arm64.AppImage'`
