@@ -68,7 +68,7 @@ DIRSTACKSIZE=60
 
 # Autoload zsh functions.
 fpath=(~/.zsh/functions $fpath)
-autoload -U ~/.zsh/functions/*(:t)
+# autoload -U ~/.zsh/functions/*(:t)
 
 fignore=(\~)
 
@@ -187,6 +187,10 @@ _comp_options=("${(@)_comp_options:#NO_ignoreclosebraces}")
 [[ -e ~/.shfuncs ]] && source ~/.shfuncs
 
 setopt notify
+
+# clang as C and C++ compiler
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
 
 eval "$(starship init zsh)"
 
