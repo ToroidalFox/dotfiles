@@ -1,0 +1,9 @@
+[[language]]
+name = "c"
+formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
+auto-format = true
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
+auto-format = true
