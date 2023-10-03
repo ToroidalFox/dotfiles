@@ -1,6 +1,7 @@
 theme = "onedark-transparent"
 
 [editor]
+true-color = true
 line-number = "relative"
 idle-timeout = 0
 color-modes = true
@@ -13,14 +14,13 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
-[editor.lsp]
-# display-inlay-hints = true
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
 
 [editor.cursor-shape]
 insert = "bar"
-
-[editor.file-picker]
-hidden = false
 
 [editor.whitespace.render]
 tab = "all"
@@ -31,6 +31,13 @@ render = true
 
 [editor.soft-wrap]
 enable = true
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[editor.lsp]
+display-inlay-hints = true
 
 [keys.normal]
 C-u = ["half_page_up", "goto_window_center"]

@@ -58,6 +58,8 @@ alias lat="ls --color -la --sort=time"
 
 alias rh='fc -R'
 
+alias cppwd='echo $(pwd) | wl-copy'
+
 autoload run-help
 
 # zsh parameters
