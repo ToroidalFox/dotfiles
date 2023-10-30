@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# konsole
+cp ~/.local/share/konsole ./.local/share -r
+
+# helix editor
 cp ~/.config/helix ./.config -r
 
 # kde plasma keyboard shortcuts
