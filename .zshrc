@@ -58,7 +58,7 @@ alias lat="ls --color -la --sort=time"
 
 alias rh='fc -R'
 
-alias cat="bat --paging=never"
+alias cat="bat --paging=never --theme=OneHalfDark"
 alias cppwd='echo $(pwd) | wl-copy'
 
 autoload run-help
