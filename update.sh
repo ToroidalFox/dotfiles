@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# zsh config
+cp ~/.zshrc ./
+
 # konsole
 cp ~/.local/share/konsole ./.local/share -r
 
