@@ -195,5 +195,8 @@ setopt notify
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
+# bat as man pager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 eval "$(starship init zsh)"
 
