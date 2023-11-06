@@ -33,17 +33,17 @@
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 "markup.list" = { fg = "red" }
 "markup.quote" = { fg = "yellow" }
-"markup.link.url" = { fg = "cyan", modifiers = ["underlined"]}
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
 "markup.link.text" = { fg = "purple" }
 
 "diff.plus" = "green"
 "diff.delta" = "gold"
 "diff.minus" = "red"
 
-"diagnostic.info".underline = { color = "blue", style = "curl" } 
-"diagnostic.hint".underline = { color = "green", style = "curl" } 
-"diagnostic.warning".underline = { color = "yellow", style = "curl" } 
-"diagnostic.error".underline = { color = "red", style = "curl" } 
+"diagnostic.info".underline = { color = "blue", style = "curl" }
+"diagnostic.hint".underline = { color = "green", style = "curl" }
+"diagnostic.warning".underline = { color = "yellow", style = "curl" }
+"diagnostic.error".underline = { color = "red", style = "curl" }
 "info" = { fg = "blue", modifiers = ["bold"] }
 "hint" = { fg = "green", modifiers = ["bold"] }
 "warning" = { fg = "yellow", modifiers = ["bold"] }
@@ -56,9 +56,9 @@
 "ui.virtual.ruler" = { bg = "gray" }
 "ui.virtual.inlay-hint" = { fg = "light-gray" }
 
-"ui.cursor" = { bg = "light-gray", fg = "light-white"}
-"ui.cursor.primary" = { bg = "white", fg = "dark-black"}
-"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
+"ui.cursor" = { bg = "light-gray", fg = "light-white" }
+"ui.cursor.primary" = { bg = "white", fg = "dark-black" }
+"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"] }
 
 "ui.selection" = { bg = "light-black" }
 "ui.selection.primary" = { bg = "gray" }

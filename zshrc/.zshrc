@@ -58,8 +58,10 @@ alias lat="ls --color -la --sort=time"
 
 alias rh='fc -R'
 
-alias cat="bat --paging=never --theme=OneHalfDark"
+# alias cat="bat --paging=never --theme=OneHalfDark"
 alias cppwd='echo $(pwd) | wl-copy'
+
+alias update-all="sudo dnf update; flatpak update; cargo install-update --all"
 
 autoload run-help
 
@@ -198,5 +200,8 @@ export CXX=/usr/bin/clang++
 # bat as man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# thefuck alias
+eval "$(thefuck --alias)"
+# cross shell prompt. https://starship.rs/
 eval "$(starship init zsh)"
 

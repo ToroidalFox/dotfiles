@@ -39,7 +39,7 @@ C-u = ["half_page_up", "goto_window_center"]
 C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
-"space" = {c = ":buffer-close"}
+"space" = { c = { w = ":write-buffer-close", c = ":buffer-close" } }
 
 [keys.select]
 C-u = ["half_page_up", "goto_window_center"]
