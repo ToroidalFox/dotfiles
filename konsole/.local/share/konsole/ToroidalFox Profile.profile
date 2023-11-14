@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Breeze Transparent
-Font=Cascadia Mono,10,-1,5,50,0,0,0,0,0
+Font=Cascadia Mono,11,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/bin/zsh
