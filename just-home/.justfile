@@ -2,8 +2,12 @@ default:
 	@just --list --unsorted
 
 [linux]
+update:
+	sudo dnf update --refresh
+
+[linux]
 update-all:
-	sudo dnf update
+	sudo dnf update --refresh
 	flatpak update
 	cargo install-update --all
 	sudo npm update -g

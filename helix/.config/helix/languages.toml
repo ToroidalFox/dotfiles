@@ -10,7 +10,7 @@ name = "rust"
 name = "python"
 language-servers = [
   { name = "pyright" },
-  { name = "ruff" }
+  { name = "ruff" },
   # { name = "pyright", except-features = ["format"] },
   # { name = "ruff", only-features = ["format"] },
 ]
@@ -19,7 +19,9 @@ command = "ruff-lsp"
 
 [[language]]
 name = "toml"
+auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
+roots = [".taplo.toml"]
 
 [[language]]
 name = "c"
