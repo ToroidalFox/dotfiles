@@ -1049,6 +1049,9 @@ Sort reversed[$d]
 Speedbar Width[$d]
 View Style[$d]
 
+[KScreen]
+ScreenScaleFactors[$d]
+
 [Main]
 AlreadyImported=defaults,kde32b1,konqueror_gestures_kde321
 Disabled=false
