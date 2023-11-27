@@ -242,11 +242,11 @@ _k_friendly_name=Emoji Selector
 _launch=Meta+.\tMeta+Ctrl+Alt+Shift+Space,Meta+.\tMeta+Ctrl+Alt+Shift+Space,Emoji Selector
 
 [org.kde.spectacle.desktop]
-ActiveWindowScreenShot=Meta+A\tMeta+Print,Meta+Print,Capture Active Window
+ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=none,none,Capture Current Monitor
-FullScreenScreenShot=Shift+Print\tMeta+C,Shift+Print,Capture Entire Desktop
-OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
-RectangularRegionScreenShot=Meta+X\tMeta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
+FullScreenScreenShot=\tShift+Print,Shift+Print,Capture Entire Desktop
+OpenWithoutScreenshot=Meta+C,none,Launch Spectacle without capturing
+RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
 _launch=Print,Print,Launch Spectacle
