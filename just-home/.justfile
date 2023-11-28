@@ -1,14 +1,18 @@
+[private]
 default:
 	@just --list --unsorted
 
+# update dnf
 [linux]
 update:
 	sudo dnf update --refresh
 
+# update dnf, flatpak, rustup, cargo, npm
 [linux]
 update-all:
 	sudo dnf update --refresh
 	flatpak update
+	rustup update
 	cargo install-update --all
 	sudo npm update -g
 
@@ -16,7 +20,7 @@ update-all:
 [linux]
 boot-macos:
 	sudo asahi-bless
-	# shutdown -r now
+	@echo "shutdown -r now"
 
 #[confirm]
 [macos]
