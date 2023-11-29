@@ -61,7 +61,7 @@ alias rh='fc -R'
 # alias cat="bat --paging=never --theme=OneHalfDark"
 alias cppwd='echo $(pwd) | wl-copy'
 
-alias update-all="sudo dnf update; flatpak update; cargo install-update --all"
+alias zj="zellij"
 
 autoload run-help
 
