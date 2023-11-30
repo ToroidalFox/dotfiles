@@ -1,0 +1,122 @@
+# Colors (Breeze Light)
+colors:
+  primary:
+    background: '#fafafa'
+    foreground: '#383a42'
+
+    # The dimmed foreground color is calculated automatically if it is not
+    # present. If the bright foreground color is not set, or
+    # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
+    # color will be used.
+    dim_foreground: '#44424c'
+    bright_foreground: '#050224'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
+
+  # Vi mode cursor colors
+  #
+  # Colors for the cursor when the vi mode is active.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #vi_mode_cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
+
+  # Search colors
+  #
+  # Colors used for the search bar and match highlighting.
+  #search:
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #matches:
+    #  foreground: '#000000'
+    #  background: '#ffffff'
+    #focused_match:
+    #  foreground: '#ffffff'
+    #  background: '#000000'
+
+  # Keyboard hints
+  #hints:
+    # First character in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #start:
+    #  foreground: '#1d1f21'
+    #  background: '#e9ff5e'
+
+    # All characters after the first one in the hint label
+    #
+    # Allowed values are CellForeground/CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #end:
+    #  foreground: '#e9ff5e'
+    #  background: '#1d1f21'
+
+  # Line indicator
+  #
+  # Color used for the indicator displaying the position in history during
+  # search and vi mode.
+  #
+  # By default, these will use the opposing primary color.
+  #line_indicator:
+  #  foreground: None
+  #  background: None
+
+  # Footer bar
+  #
+  # Color used for the footer bar on the bottom, used by search regex input,
+  # hyperlink URI preview, etc.
+  #
+  #footer_bar:
+  #  background: '#c5c8c6'
+  #  foreground: '#1d1f21'
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area.
+  #
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #selection:
+  #  text: CellBackground
+  #  background: CellForeground
+
+  normal:
+    black:   '#383a42'
+    red:     '#e4564a'
+    green:   '#50a050'
+    yellow:  '#c28402'
+    blue:    '#0070d4'
+    magenta: '#a626a4'
+    cyan:    '#0a96b4'
+    white:   '#fafafa'
+
+  bright:
+    black:   '#1c1a24'
+    red:     '#f83636'
+    green:   '#50c850'
+    yellow:  '#de6602'
+    blue:    '#005ce8'
+    magenta: '#ba0eb8'
+    cyan:    '#00aac8'
+    white:   '#ffffff'
+
+  dim:
+    black:   '#44424c'
+    red:     '#c6605e'
+    green:   '#648c64'
+    yellow:  '#ae9802'
+    blue:    '#1484c0'
+    magenta: '#885488'
+    cyan:    '#1eaaa0'
+    white:   '#e6e6e6'

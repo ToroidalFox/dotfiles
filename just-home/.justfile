@@ -11,7 +11,7 @@ update:
 [linux]
 update-all:
 	sudo dnf update --refresh
-	flatpak update
+	flatpak update -y
 	rustup update
 	cargo install-update --all
 	sudo npm update -g
