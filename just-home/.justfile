@@ -16,6 +16,10 @@ update-all:
 	cargo install-update --all
 	sudo npm update -g
 
+update-manual:
+	@echo "ArmCord: https://github.com/ArmCord/ArmCord/releases"
+	@echo "overGrive: https://www.overgrive.com/"
+
 #[confirm]
 [linux]
 boot-macos:

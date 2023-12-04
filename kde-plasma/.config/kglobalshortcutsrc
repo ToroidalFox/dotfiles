@@ -311,3 +311,7 @@ kcm-lookandfeel=none,none,Global Theme
 kcm-users=none,none,Users
 powerdevilprofilesconfig=none,none,Energy Saving
 screenlocker=none,none,Screen Locking
+
+[xyz.armcord.ArmCord.desktop]
+_k_friendly_name=ArmCord
+_launch=none,none,Launch ArmCord

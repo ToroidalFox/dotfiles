@@ -199,6 +199,7 @@ export CXX=/usr/bin/clang++
 
 # bat as man pager
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="OneHalfLight"
 
 # thefuck alias
 eval "$(thefuck --alias)"

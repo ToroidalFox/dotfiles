@@ -32,3 +32,17 @@ auto-format = true
 name = "cpp"
 formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
 auto-format = true
+
+[[language]]
+name = "glsl"
+scope = "source.glsl"
+file-types = ["glsl", "vert", "tesc", "tese", "geom", "frag", "comp"]
+# glsl, vertex, tessellation contron, tessellation, geometry, fragment, compute shader
+# roots = []
+# comment-token = "//"
+# formatter = { command = "glsl_analyzer" }
+injection-regex = "glsl"
+language-servers = ["glsl_analyzer"]
+
+[language-server.glsl_analyzer]
+command = "glsl_analyzer"
