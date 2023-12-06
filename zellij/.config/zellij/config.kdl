@@ -237,11 +237,26 @@ default_shell "zsh"
 //         white 255 255 255
 //     }
 // }
-
+themes {
+    breeze-dark {
+        bg      "#161718"
+        fg      "#fcfcfc"
+        black   "#232627"
+        red     "#ed1515"
+        green   "#11d116"
+        yellow  "#fdbc4b"
+        blue    "#1d99f3"
+        magenta "#9b59b6"
+        cyan    "#1abc9c"
+        white   "#fcfcfc"
+        orange  "#f67400"
+    }
+}
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
 // theme "default"
+theme "breeze-dark"
 
 // The name of the default layout to load on startup
 // Default: "default"
