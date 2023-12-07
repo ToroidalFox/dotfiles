@@ -44,4 +44,5 @@ dnf copr enable atim/bottom -y
 dnf install bottom # cross-platform system monitor. https://github.com/ClementTsang/bottom
 
 dnf install fd-find
+dnf install ripgrep
 ```
