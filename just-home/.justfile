@@ -27,14 +27,12 @@ update:
 	brew update
 	brew upgrade
 
-#[confirm]
 [linux]
 boot-macos:
 	sudo asahi-bless
-	@echo "shutdown -r now"
+	shutdown -r now
 
-#[confirm]
 [macos]
 boot-asahi:
 	sudo bless -mount /Volumes/Fedora\ Asahi -setBoot
-	@echo "sudo shutdown -r now"
+	sudo shutdown -r now
