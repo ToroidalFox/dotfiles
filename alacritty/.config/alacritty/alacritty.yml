@@ -55,7 +55,7 @@ window:
   #  y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -457,8 +457,8 @@ live_config_reload: true
 shell:
   # program: /usr/bin/zellij
   program: /bin/zsh
-#  args:
-#    - --login
+  args:
+    - --login
 
 # Startup directory
 #
