@@ -35,6 +35,7 @@ git-ignore = false
 display-inlay-hints = true
 
 [keys.normal]
+x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
 C-u = ["half_page_up", "goto_window_center"]
 C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
