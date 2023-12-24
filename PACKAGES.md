@@ -1,9 +1,9 @@
 ## Fedora Asahi Remix
 ### DNF
 ```sh
-  dnf install zsh alacritty git gh gitui stow helix wl-clipboard just ripgrep bat fd-find python-unversioned-command nodejs podman
-  dnf install chromium gimp kdenlive
-  dnf install fcitx5-hangul
+  dnf install zsh alacritty gh gitui stow helix wl-clipboard just ripgrep bat fd-find neofetch python-unversioned-command nodejs podman
+  dnf install thunderbird chromium gimp kdenlive
+  dnf install asahi-bless
   dnf groupinstall "Development Tools" "Development Libraries"
 ```
 ### DNF Copr
