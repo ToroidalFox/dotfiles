@@ -5,21 +5,15 @@ default:
 # update dnf
 [linux]
 update:
-	sudo dnf update --refresh
+	sudo dnf upgrade --refresh
 
 # update dnf, flatpak, rustup, cargo, npm
 [linux]
-update-all:
-	sudo dnf update --refresh
+update-all: update
 	flatpak update -y
 	rustup update
 	cargo install-update --all
 	sudo npm update -g
-
-[linux]
-update-manual:
-	@echo "ArmCord: https://github.com/ArmCord/ArmCord/releases"
-	@echo "overGrive: https://www.overgrive.com/"
 
 # brew update, upgrade
 [macos]

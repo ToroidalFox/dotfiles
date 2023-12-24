@@ -21,7 +21,7 @@ command = "ruff-lsp"
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
-roots = [".taplo.toml"]
+roots = [".taplo"]
 
 [[language]]
 name = "c"
