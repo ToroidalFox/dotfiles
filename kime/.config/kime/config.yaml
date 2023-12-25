@@ -4,7 +4,7 @@ daemon:
   - Wayland
   - Indicator
 indicator:
-  icon_color: White
+  icon_color: Black
 log:
   global_level: DEBUG
 engine:

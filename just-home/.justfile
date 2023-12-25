@@ -5,7 +5,7 @@ default:
 # update dnf
 [linux]
 update:
-	sudo dnf upgrade --refresh
+	sudo dnf upgrade --refresh --exclude=kwin,kwin-common,kwin-libs,kwin-wayland
 
 # update dnf, flatpak, rustup, cargo, npm
 [linux]
