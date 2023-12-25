@@ -1,29 +1,38 @@
 ## Fedora Asahi Remix
 ### DNF
 ```sh
-  dnf install zsh alacritty gh gitui stow helix wl-clipboard just ripgrep bat fd-find neofetch python-unversioned-command nodejs podman mold
-  dnf install thunderbird chromium gimp kdenlive vlc
-  dnf install asahi-bless
-  dnf groupinstall "Development Tools" "Development Libraries"
+dnf install zsh alacritty gh gitui stow helix wl-clipboard just ripgrep bat fd-find neofetch python-unversioned-command nodejs podman mold
+dnf install thunderbird chromium gimp kdenlive vlc
+dnf install asahi-bless
+dnf groupinstall "Development Tools" "Development Libraries"
 ```
 ### DNF Copr
 ```sh
-  dnf copr enable toroidalfox/kime
-  dnf install kime
-  dnf copr enable g3tchoo/prismlauncher
-  dnf install prismlauncher
-  dnf copr enable atim/bottom
-  dnf install bottom
+dnf copr enable toroidalfox/kime
+dnf install kime
+dnf copr enable g3tchoo/prismlauncher
+dnf install prismlauncher
+dnf copr enable atim/bottom
+dnf install bottom
 ```
 
 ### Flatpak
 ```sh
-  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  flatpak install flathub io.dbeaver.DBeaverCommunity
-  flatpak install flathub io.podman_desktop.PodmanDesktop
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub io.dbeaver.DBeaverCommunity
+flatpak install flathub io.podman_desktop.PodmanDesktop
+```
+
+### cargo
+```sh
+cargo install cargo-update
+cargo install taplo-cli --features lsp
 ```
 
 ### npm
+```sh
+npm i -g vscode-langservers-extracted
+```
 
 ### AppImage
 
@@ -43,6 +52,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - [overGrive](https://www.overgrive.com)
 - [ArmCord](https://github.com/ArmCord/ArmCord/releases)
 - [VSCode](https://code.visualstudio.com/docs/setup/linux)
+- [Marksman](https://github.com/artempyanykh/marksman/releases)
 
 ### KDE Plasma Widgets
 
