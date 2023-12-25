@@ -26,12 +26,15 @@ flatpak install flathub io.podman_desktop.PodmanDesktop
 ### cargo
 ```sh
 cargo install cargo-update
+cargo install rm-improved
 cargo install taplo-cli --features lsp
+cargo install cargo-leptos
 ```
 
 ### npm
 ```sh
 npm i -g vscode-langservers-extracted
+npm i -g @tailwindcss/language-server
 ```
 
 ### AppImage
