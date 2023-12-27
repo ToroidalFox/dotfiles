@@ -35,6 +35,7 @@ cargo install cargo-leptos
 ```sh
 npm i -g vscode-langservers-extracted
 npm i -g @tailwindcss/language-server
+npm i -g sass
 ```
 
 ### AppImage
