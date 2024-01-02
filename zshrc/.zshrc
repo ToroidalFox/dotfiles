@@ -27,6 +27,9 @@ compinit
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+alias es="eza"
+alias ea="eza -a"
+alias ela="eza -la"
 alias cppwd='echo $(pwd) | wl-copy'
 
 export BAT_THEME="OneHalfLight"
