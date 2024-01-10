@@ -15,6 +15,11 @@ Switch keyboard layout to English (US)=none,none,Switch keyboard layout to Engli
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[code.desktop]
+_k_friendly_name=Visual Studio Code
+_launch=none,none,Launch Visual Studio Code
+new-empty-window=none,none,New Empty Window
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
