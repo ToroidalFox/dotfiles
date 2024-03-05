@@ -2,10 +2,16 @@
 default:
 	@just --list --unsorted
 
+edit:
+	hx .justfile
+
+mount:
+	rclone mount --vfs-cache-mode full --daemon gdrive: ~/GoogleDrive
+
 # update dnf
 [linux]
 update:
-	sudo dnf upgrade --refresh --exclude=kwin,kwin-common,kwin-libs,kwin-wayland
+	sudo dnf upgrade
 
 # update dnf, flatpak, rustup, cargo, npm
 [linux]
@@ -22,11 +28,13 @@ update:
 	brew upgrade
 
 [linux]
+[confirm]
 boot-macos:
 	sudo asahi-bless
 	shutdown -r now
 
 [macos]
+[confirm]
 boot-asahi:
 	sudo bless -mount /Volumes/Fedora\ Asahi -setBoot
 	sudo shutdown -r now

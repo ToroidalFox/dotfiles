@@ -14,6 +14,8 @@ dnf copr enable g3tchoo/prismlauncher
 dnf install prismlauncher
 dnf copr enable atim/bottom
 dnf install bottom
+dnf copr enable varlad/zellij
+dnf install zellij
 ```
 
 ### Flatpak
