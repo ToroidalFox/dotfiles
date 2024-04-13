@@ -32,6 +32,9 @@ alias ea="eza -a"
 alias ela="eza -la"
 alias cppwd='echo $(pwd) | wl-copy'
 
+alias aie="gh copilot explain"
+alias ais="gh copilot suggest"
+
 export BAT_THEME="OneHalfLight"
 
 eval "$(starship init zsh)"

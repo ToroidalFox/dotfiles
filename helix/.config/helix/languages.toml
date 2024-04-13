@@ -27,12 +27,9 @@ language-servers = [
 
 [[language]]
 name = "python"
-language-servers = [
-  { name = "pyright" },
-  { name = "ruff" },
-  # { name = "pyright", except-features = ["format"] },
-  # { name = "ruff", only-features = ["format"] },
-]
+auto-format = true
+language-servers = ["ruff", { name = "pyright", except-features = ["format"] }]
+
 [language-server.ruff]
 command = "ruff-lsp"
 

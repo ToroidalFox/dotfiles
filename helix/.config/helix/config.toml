@@ -6,6 +6,7 @@ line-number = "relative"
 idle-timeout = 0
 color-modes = true
 auto-format = true
+auto-pairs = false
 
 [editor.statusline]
 left = ["spinner", "file-name"]
