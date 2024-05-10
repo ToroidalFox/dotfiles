@@ -1,0 +1,37 @@
+(
+    name: "Breeze Light",
+    foreground: "#383a42",
+    cursor: "#383a42",
+    bright_foreground: "#050224",
+    dim_foreground: "#44424c",
+    normal: (
+        black: "#383a42",
+        red: "#e4564a",
+        yellow: "#c28402",
+        green: "#50a050",
+        blue: "#0070d4",
+        magenta: "#a626a4",
+        cyan: "#0a96b4",
+        white: "#fafafa",
+    ),
+    bright: (
+        black: "#1c1a24",
+        red: "#f83636",
+        yellow: "#de6602",
+        green: "#50c850",
+        blue: "#005ce8",
+        magenta: "#ba0eb8",
+        cyan: "#00aac8",
+        white: "#ffffff",
+    ),
+    dim: (
+        black: "#44424c",
+        red: "#c6605e",
+        yellow: "#ae9802",
+        green: "#648c64",
+        blue: "#1484c0",
+        cyan: "#1eaaa0",
+        magenta: "#885488",
+        white: "#e6e6e6",
+    )
+)
