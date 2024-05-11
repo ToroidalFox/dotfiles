@@ -32,8 +32,12 @@ alias ea="eza -a"
 alias ela="eza -la"
 alias cppwd='echo $(pwd) | wl-copy'
 
+alias zj="zellij"
 alias aie="gh copilot explain"
 alias ais="gh copilot suggest"
+
+export EDITOR=hx
+# export VISUAL=bat
 
 export BAT_THEME="OneHalfLight"
 

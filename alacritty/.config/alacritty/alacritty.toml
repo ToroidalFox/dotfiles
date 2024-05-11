@@ -1,4 +1,7 @@
-import = ["/home/toroidalfox/.config/alacritty/themes/breeze-dark.toml", "/home/toroidalfox/.config/alacritty/themes/breeze-light.toml"]
+import = [
+  "/home/toroidalfox/.config/alacritty/themes/breeze-dark.toml",
+  "/home/toroidalfox/.config/alacritty/themes/breeze-light.toml",
+]
 live_config_reload = true
 
 [colors]
@@ -26,11 +29,6 @@ style = "Italic"
 family = "Cascadia Mono"
 style = "Regular"
 
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "T"
-mods = "Control|Shift"
-
 [shell]
 args = ["--login"]
 program = "/bin/zsh"
@@ -38,7 +36,7 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 dynamic_padding = true
-opacity = 0.98
+opacity = 0.94
 resize_increments = true
 
 [window.dimensions]
