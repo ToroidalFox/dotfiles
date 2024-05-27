@@ -6,6 +6,11 @@ default:
 edit:
 	hx .justfile
 
+init: gh mount
+
+gh:
+	gh auth status
+
 mount:
 	rclone mount --vfs-cache-mode full --daemon gdrive: ~/GoogleDrive
 
@@ -35,7 +40,7 @@ update:
 [linux]
 [confirm]
 boot-macos:
-	sudo asahi-bless
+	sudo asahi-bless --set-boot 1 --yes
 	shutdown -r now
 
 [macos]

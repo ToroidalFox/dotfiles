@@ -1,7 +1,7 @@
 ## Fedora Asahi Remix
 ### DNF
 ```sh
-dnf install zsh eza alacritty gh gitui stow helix wl-clipboard just ripgrep bat fd-find neofetch python-unversioned-command nodejs podman mold
+dnf install zsh eza alacritty gh gitui stow helix wl-clipboard just ripgrep bat fd-find neofetch python-unversioned-command nodejs podman mold btop
 dnf install thunderbird chromium gimp kdenlive vlc
 dnf install asahi-bless
 dnf groupinstall "Development Tools" "Development Libraries"
@@ -12,8 +12,6 @@ dnf copr enable toroidalfox/kime
 dnf install kime
 dnf copr enable g3tchoo/prismlauncher
 dnf install prismlauncher
-dnf copr enable atim/bottom
-dnf install bottom
 dnf copr enable varlad/zellij
 dnf install zellij
 ```
