@@ -30,11 +30,10 @@ alias lla="ls -la"
 alias es="eza"
 alias ea="eza -a"
 alias ela="eza -la"
-alias cppwd='echo $(pwd) | wl-copy'
+alias cppwd="echo $(pwd) | wl-copy"
+alias evoke="xdg-open $@ > /dev/null 2>&1"
 
 alias zj="zellij"
-alias aie="gh copilot explain"
-alias ais="gh copilot suggest"
 
 export EDITOR=hx
 # export VISUAL=bat
