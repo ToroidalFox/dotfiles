@@ -33,17 +33,21 @@ alias ela="eza -la"
 alias cppwd="echo $(pwd) | wl-copy"
 alias evoke="xdg-open $@ > /dev/null 2>&1"
 
-alias justemplate='if [ ! -f .justfile ]; then cat << EOF > .justfile
+alias zj="zellij"
+alias ff="fastfetch"
+
+function justemplate {
+    if [ ! -f .justfile ]; then cat << EOF > .justfile
 [private]
 default:
     @just --list --unsorted
 
+[private]
 edit:
     @\$EDITOR .justfile
 EOF
-fi'
-alias zj="zellij"
-alias ff="fastfetch"
+    fi
+}
 
 export EDITOR=hx
 # export VISUAL=bat
