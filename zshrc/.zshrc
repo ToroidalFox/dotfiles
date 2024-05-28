@@ -30,11 +30,22 @@ alias lla="ls -la"
 alias es="eza"
 alias ea="eza -a"
 alias ela="eza -la"
-alias cppwd="echo $(pwd) | wl-copy"
-alias evoke="xdg-open $@ > /dev/null 2>&1"
 
 alias zj="zellij"
 alias ff="fastfetch"
+
+export EDITOR=hx
+# export VISUAL=bat
+
+export BAT_THEME="OneHalfLight"
+
+function cppwd {
+    echo $(pwd) | wl-copy
+}
+
+function evoke {
+    xdg-open $@ > /dev/null 2>&1
+}
 
 function justemplate {
     if [ ! -f .justfile ]; then cat << EOF > .justfile
@@ -48,10 +59,5 @@ edit:
 EOF
     fi
 }
-
-export EDITOR=hx
-# export VISUAL=bat
-
-export BAT_THEME="OneHalfLight"
 
 eval "$(starship init zsh)"
