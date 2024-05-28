@@ -2,9 +2,8 @@
 default:
 	@just --list --unsorted
 
-
 edit:
-	hx .justfile
+	@$EDITOR .justfile
 
 init: gh mount
 
