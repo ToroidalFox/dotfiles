@@ -39,12 +39,26 @@ export EDITOR=hx
 
 export BAT_THEME="OneHalfLight"
 
+PLATFORM="$(uname)"
 function cppwd {
-    echo $(pwd) | wl-copy
+    if [[ "$PLATFORM" == "Linux" && "$XDG_SESSION_TYPE" == "wayland" ]]; then
+        if command -v wl-copy > /dev/null 2>&1; then
+            echo -n $(pwd) | wl-copy
+            echo "$(pwd) > clipboard"
+        else
+            echo "wl-clipboard(wl-copy) does not exist."
+        fi
+    else
+        echo "`cppwd` is not implemented in this platform."
+    fi
 }
 
 function evoke {
-    xdg-open $@ > /dev/null 2>&1
+    if [[ $PLATFORM == "Linux" ]]; then
+        xdg-open $@ > /dev/null 2>&1
+    else
+        echo "`evoke` is not implemented in this platform."
+    fi
 }
 
 function justemplate {
