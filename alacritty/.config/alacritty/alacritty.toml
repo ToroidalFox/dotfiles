@@ -36,7 +36,8 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 dynamic_padding = true
-opacity = 0.94
+opacity = 0.90
+blur = true
 resize_increments = true
 
 [window.dimensions]

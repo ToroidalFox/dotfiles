@@ -51,3 +51,4 @@ C-d = ["half_page_down", "goto_window_center"]
 [keys.insert]
 C-h = "move_char_left"
 C-l = "move_char_right"
+C-p = "paste_before"

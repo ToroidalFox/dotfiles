@@ -6,7 +6,8 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = ToroidalFox
-	email = 93528864+ToroidalFox@users.noreply.github.com
+	# email = 93528864+ToroidalFox@users.noreply.github.com
+	email = ToroidalFox@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
