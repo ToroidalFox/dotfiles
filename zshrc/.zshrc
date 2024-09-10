@@ -29,6 +29,7 @@ alias la="ls -a"
 alias lla="ls -la"
 alias es="eza"
 alias ea="eza -a"
+alias el="eza -l"
 alias ela="eza -la"
 
 alias zj="zellij"
