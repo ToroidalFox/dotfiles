@@ -13,6 +13,7 @@ setopt \
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/toroidalfox/.zshrc'
 
+
 bindkey -e
 
 bindkey '^[[1;5D' backward-word
@@ -20,8 +21,8 @@ bindkey '^[[H'    beginning-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[F'    end-of-line
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # aliases
 alias ll="ls -l"
