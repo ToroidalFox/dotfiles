@@ -20,11 +20,28 @@ authgen:
 update:
 	sudo dnf upgrade
 
+[linux]
 update-all: update
 	sudo npm update -g
 	flatpak update -y
 	rustup update
 	cargo install-update --all
+
+[linux]
+fcitx-as:
+	mv .config/autostart_unused/org.fcitx.Fcitx5.desktop .config/autostart
+
+[linux]
+fcitx-nas:
+	mv .config/autostart/org.fcitx.Fcitx5.desktop .config/autostart_unused
+
+[linux]
+kime-as:
+	mv .config/autostart_unused/kime.desktop .config/autostart
+
+[linux]
+kime-nas:
+	mv .config/autostart/kime.desktop .config/autostart_unused
 
 # @update update_mode="":
 # 	if [[ "{{update_mode}}" = "all" ]]; then \
