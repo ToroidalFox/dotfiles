@@ -48,3 +48,7 @@ auto-format = true
 name = "cpp"
 formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
 auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["markdown-oxide"]

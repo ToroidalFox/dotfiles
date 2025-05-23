@@ -25,6 +25,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # aliases
+alias rm="rm -i" # rm safety
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
