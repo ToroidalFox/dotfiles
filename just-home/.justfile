@@ -17,7 +17,7 @@ authgen *query:
 	ykman oath accounts code {{query}}
 
 authcp query:
-	ykman oath accounts code --single {{query}} | tee /dev/tty | wl-copy
+	@echo && ykman oath accounts code --single {{query}} | tee /dev/tty | wl-copy --trim-newline
 
 [linux]
 update:
