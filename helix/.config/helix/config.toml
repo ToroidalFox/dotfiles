@@ -23,6 +23,13 @@ newline = "all"
 
 [editor.indent-guides]
 render = true
+# character = "▏"
+# character = "▎"
+# character = "❙"
+# character = "·"
+character = "⠆"
+# character = "["
+skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
@@ -52,3 +59,4 @@ C-d = ["half_page_down", "goto_window_center"]
 C-h = "move_char_left"
 C-l = "move_char_right"
 C-p = "paste_before"
+C-c = "toggle_comments"

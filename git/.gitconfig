@@ -1,9 +1,3 @@
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [user]
 	name = ToroidalFox
 	# email = 93528864+ToroidalFox@users.noreply.github.com
@@ -13,3 +7,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[credential]
+	# helper = cache --timeout 21600
+	helper = /usr/libexec/git-core/git-credential-libsecret
+	helper = oauth # git-credential-oauth package

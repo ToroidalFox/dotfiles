@@ -138,7 +138,7 @@
 "ui.virtual.ruler" = { bg = "grey-200" }
 "ui.virtual.wrap" = { fg = "grey-500" }
 "ui.virtual.whitespace" = { fg = "grey-300" }
-"ui.virtual.indent-guide" = { fg = "grey-500" }
+"ui.virtual.indent-guide" = { fg = "grey-400" }
 "ui.virtual.inlay-hint" = { fg = "grey-500" }
 "ui.virtual.inlay-hint.parameter" = { fg = "grey-500", modifiers = ["italic"] }
 "ui.virtual.inlay-hint.type" = { fg = "grey-500" }
