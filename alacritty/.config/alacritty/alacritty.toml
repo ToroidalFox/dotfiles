@@ -44,3 +44,6 @@ resize_increments = true
 [window.dimensions]
 columns = 110
 lines = 36
+
+[keyboard]
+bindings = [{key = "Q", mods = "Control", action = "Quit"}]
