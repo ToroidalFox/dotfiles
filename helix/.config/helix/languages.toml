@@ -36,8 +36,8 @@ command = "ruff-lsp"
 [[language]]
 name = "toml"
 auto-format = true
-formatter = { command = "taplo", args = ["format", "-"] }
-roots = [".taplo"]
+roots = ["."]
+language-servers = ["taplo"]
 
 [[language]]
 name = "c"

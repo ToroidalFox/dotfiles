@@ -108,8 +108,10 @@ keybinds clear-defaults=true {
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
-        bind "Shift h" { MovePane "Left"; }
-        bind "Shift l" { MovePane "Right"; }
+        bind "Shift h" { MoveTab "Left"; }
+        bind "Shift l" { MoveTab "Right"; }
+        // bind "Shift h" { MovePane "Left"; }
+        // bind "Shift l" { MovePane "Right"; }
         bind "n" { NewTab; SwitchToMode "Normal"; }
         bind "x" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
@@ -403,7 +405,7 @@ theme "breeze-light"
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
 //
-copy_on_select true
+copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL

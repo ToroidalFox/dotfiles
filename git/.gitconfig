@@ -9,5 +9,5 @@
 	required = true
 [credential]
 	# helper = cache --timeout 21600
-	helper = /usr/libexec/git-core/git-credential-libsecret
+	helper = libsecret
 	helper = oauth # git-credential-oauth package

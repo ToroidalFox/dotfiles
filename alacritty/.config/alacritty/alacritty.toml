@@ -1,8 +1,8 @@
 [general]
 live_config_reload = true
 import = [
-  "/home/toroidalfox/.config/alacritty/themes/breeze-dark.toml",
-  "/home/toroidalfox/.config/alacritty/themes/breeze-light.toml",
+  "~/.config/alacritty/themes/breeze-dark.toml",
+  "~/.config/alacritty/themes/breeze-light.toml",
 ]
 
 [colors]
