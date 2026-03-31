@@ -21,6 +21,7 @@ bindkey '^[[H'    beginning-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[F'    end-of-line
 
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
@@ -75,15 +76,6 @@ edit:
     @\$EDITOR .justfile
 EOF
     fi
-}
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
 }
 
 eval "$(starship init zsh)"

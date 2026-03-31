@@ -43,10 +43,10 @@ display-inlay-hints = true
 
 [keys.normal]
 # x = ["goto_line_start", "select_mode", "goto_line_end_newline"]
-d = "delete_selection_noyank"
-D = "delete_selection"
+# d = "delete_selection_noyank"
+D = "delete_selection_noyank"
 c = "change_selection_noyank"
-C = "change_selection"
+# C = "change_selection"
 C-u = ["half_page_up", "goto_window_center"]
 C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
@@ -54,10 +54,10 @@ C-d = ["half_page_down", "goto_window_center"]
 "space" = { c = { w = ":write-buffer-close", c = ":buffer-close" } }
 
 [keys.select]
-d = "delete_selection_noyank"
-D = "delete_selection"
+# d = "delete_selection_noyank"
+D = "delete_selection_noyank"
 c = "change_selection_noyank"
-C = "change_selection"
+# C = "change_selection"
 C-u = ["half_page_up", "goto_window_center"]
 C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
