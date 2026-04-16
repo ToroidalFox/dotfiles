@@ -1,0 +1,46 @@
+[options]
+focus_follows_mouse = false
+mouse_follows_focus = false
+preset_column_widths = [0.33, 0.5, 0.7, 0.96]
+animation_speed = 60
+
+[swipe]
+sensitivity = 0.25
+deceleration = 4.0
+
+[swipe.gesture]
+fingers_count = 3
+direction = "Natural"
+
+[decorations.inactive.dim]
+opacity = -0.06
+
+[bindings]
+window_focus_west = ["alt - a"]
+window_focus_east = ["alt - d"]
+window_swap_west = ["alt + shift - a"]
+window_swap_east = ["alt + shift - d"]
+window_swap_north = "alt + shift - w"
+window_swap_south = "alt + shift - s"
+window_stack = ["alt - g"]
+window_unstack = ["alt + shift - g"]
+window_resize = "alt - r"
+window_shrink = "alt + shift - r"
+window_fullwidth = ["alt - m"]
+window_center = ["alt - z", "alt - o"]
+window_manage = ["alt - f"]
+window_virtual_north = ["alt - p"]
+window_virtual_south = ["alt - n"]
+window_virtualmove_north = ["alt + shift - p"]
+window_virtualmove_south = ["alt + shift - n"]
+quit = "ctrl + alt - q"
+
+[windows.zen-pip]
+title = "Picture-in-Picture"
+bundle_id = "app.zen-browser.zen"
+floating = true
+
+[windows.keepassxc]
+title = ".*"
+bundle_id = "org.keepassxc.keepassxc"
+floating = false

@@ -79,3 +79,7 @@ EOF
 }
 
 eval "$(starship init zsh)"
+
+if [[ "$OSTYPE" == darwin* ]]; then
+    export PATH="/opt/homebrew/opt/macos-trash/bin:$PATH"
+fi

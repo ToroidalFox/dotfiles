@@ -16,8 +16,13 @@ mount:
 authgen *query:
 	ykman oath accounts code {{query}}
 
+[linux]
 authcp query:
 	@echo && ykman oath accounts code --single {{query}} | tee /dev/tty | wl-copy --trim-newline
+
+[macos]
+authcp query:
+	@ykman oath accounts code --single {{query}} | tee /dev/tty | tr -d '[:space:]' | pbcopy
 
 [linux]
 update:
