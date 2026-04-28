@@ -22,8 +22,10 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[F'    end-of-line
 
 fpath=(~/.zsh/completions $fpath)
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+source <(jj util completion zsh)
 
 # aliases
 alias rm="rm -i" # rm safety

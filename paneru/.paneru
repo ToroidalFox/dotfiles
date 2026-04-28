@@ -1,8 +1,11 @@
 [options]
 focus_follows_mouse = false
 mouse_follows_focus = false
-preset_column_widths = [0.33, 0.5, 0.7, 0.96]
+preset_column_widths = [0.33, 0.5, 0.75, 0.96]
 animation_speed = 60
+silver_width = 2
+silver_height = 1.0
+auto_center = true
 
 [swipe]
 sensitivity = 0.25
@@ -12,8 +15,15 @@ deceleration = 4.0
 fingers_count = 3
 direction = "Natural"
 
+[decorations.active.border]
+enabled = false
+color = "#2fafef"
+opacity = 1.0
+width = 4.0
+radius = "auto"
+
 [decorations.inactive.dim]
-opacity = -0.06
+opacity = -0.08
 
 [bindings]
 window_focus_west = ["alt - a"]
@@ -29,10 +39,10 @@ window_shrink = "alt + shift - r"
 window_fullwidth = ["alt - m"]
 window_center = ["alt - z", "alt - o"]
 window_manage = ["alt - f"]
-window_virtual_north = ["alt - p"]
-window_virtual_south = ["alt - n"]
-window_virtualmove_north = ["alt + shift - p"]
-window_virtualmove_south = ["alt + shift - n"]
+# window_virtual_north = ["alt - p"]
+# window_virtual_south = ["alt - n"]
+# window_virtualmove_north = ["alt + shift - p"]
+# window_virtualmove_south = ["alt + shift - n"]
 quit = "ctrl + alt - q"
 
 [windows.zen-pip]
