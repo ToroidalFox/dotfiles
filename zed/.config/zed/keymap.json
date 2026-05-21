@@ -1,0 +1,59 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": ["task::Spawn", { "task_name": "terminal" }],
+    },
+  },
+  {
+    "context": "(vim_mode == insert) && !menu",
+    "bindings": {
+      "ctrl-c": "vim::ToggleComments",
+      "ctrl-p": "editor::Paste",
+      "ctrl-h": "vim::Left",
+      "ctrl-l": "vim::Right",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-c": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "f1": "command_palette::Toggle",
+    },
+  },
+  {
+    "context": "Editor && VimControl",
+    "unbind": {
+      "cmd-a": "editor::SelectAll",
+    },
+  },
+  {
+    "context": "Workspace && !Terminal",
+    "bindings": {
+      "cmd-a": "agent::ToggleFocus",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "g t": "vim::GoToTab",
+      "g shift-t": "vim::GoToPreviousTab",
+    },
+    "bindings": {
+      "cmd-k": "vim::GoToTab",
+      "cmd-j": "vim::GoToPreviousTab",
+    },
+  },
+]

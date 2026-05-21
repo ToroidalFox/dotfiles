@@ -1,0 +1,134 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+      "enable_thinking": false,
+    },
+    "dock": "right",
+    "default_profile": "ask",
+    "default_model": {
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+      "enable_thinking": true,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "Cascadia Mono",
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+  "helix_mode": true,
+
+  "git_panel": { "dock": "left", "button": false },
+
+  // Scrollbar related settings
+  "scrollbar": {
+    // When to show the scrollbar in the editor (auto, system, always, never)
+    "show": "never",
+    "cursors": true, // Show cursor positions in the scrollbar.
+    "search_results": true, // Show buffer search results in the scrollbar.
+    "selected_text": true, // Show selected text occurrences in the scrollbar.
+    "selected_symbol": true, // Show selected symbol occurrences in the scrollbar.
+    "diagnostics": "all", // Show diagnostics (none, error, warning, information, all)
+    "axes": {
+      "horizontal": false, // Show/hide the horizontal scrollbar
+      "vertical": true, // Show/hide the vertical scrollbar
+    },
+  },
+  "soft_wrap": "editor_width",
+
+  // Minimap related settings
+  "minimap": {
+    "show": "always", // When to show (auto, always, never)
+    "display_in": "active_editor", // Where to show (active_editor, all_editor)
+    "thumb": "always", // When to show thumb (always, hover)
+    "thumb_border": "left_open", // Thumb border (left_open, right_open, full, none)
+    "max_width_columns": 80, // Maximum width of minimap
+    "current_line_highlight": null, // Highlight current line (null, line, gutter)
+  },
+
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+
+  // Control Editor scroll beyond the last line: off, one_page, vertical_scroll_margin
+  "scroll_beyond_last_line": "one_page",
+
+  "edit_predictions": {
+    "provider": "copilot",
+    "open_ai_compatible_api": {
+      "api_url": "http://192.168.60.61:8037/v1/completions",
+      "model": "OmniCoder-9B: Q4_K_M",
+      "prompt_format": "qwen",
+      "max_output_tokens": 256,
+    },
+    "disabled_globs": ["~/.config/zed/settings.json"],
+  },
+
+  "language_models": {
+    "openai_compatible": {
+      "LLaMA.cpp (LAN)": {
+        "api_url": "http://192.168.60.61:8037/v1",
+        "available_models": [
+          {
+            "name": "omnicoder-9b-q4_k_m",
+            "display_name": "OmniCoder-9B: Q4_K_M",
+            "max_tokens": 16384,
+            "max_output_tokens": 256,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+
+  "languages": {
+    "TOML": {
+      "show_edit_predictions": false,
+    },
+    "HTML": {
+      "preferred_line_length": 120,
+      "tab_size": 2,
+    },
+    "CSS": {
+      "tab_size": 2,
+    },
+  },
+  "lsp": {},
+}

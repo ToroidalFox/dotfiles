@@ -31,7 +31,8 @@ auto-format = true
 language-servers = ["ruff", { name = "pyright", except-features = ["format"] }]
 
 [language-server.ruff]
-command = "ruff-lsp"
+command = "ruff"
+args = ["server"]
 
 [[language]]
 name = "toml"

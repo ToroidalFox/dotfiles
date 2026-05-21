@@ -5,14 +5,6 @@ default:
 edit:
 	@$EDITOR .justfile
 
-init: gh mount
-
-gh:
-	gh auth status
-
-mount:
-	rclone mount --vfs-cache-mode full --daemon gdrive: ~/GoogleDrive
-
 authgen *query:
 	ykman oath accounts code {{query}}
 
