@@ -4,14 +4,5 @@
 name = "ToroidalFox"
 email = "toroidalfox@gmail.com"
 
-[ui]
-diff-editor = "diffedit3"
-
 [revsets]
 log = 'ancestors(@, 8) | ancestors(visible_heads(), 8) | ancestors(bookmarks(), 8) | ancestors(remote_bookmarks(), 8) | divergent()'
-
-[revset-aliases]
-ov = 'ancestors(@, 4) | ancestors(visible_heads(), 4) | ancestors(bookmarks(), 4) | ancestors(remote_bookmarks(), 4) | divergent()'
-
-[gg.ui]
-recent-workspaces = ["/Users/toroidalfox/repos/paneru"]
