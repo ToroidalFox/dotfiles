@@ -46,7 +46,7 @@ export EDITOR=hx
 export BAT_THEME="OneHalfLight"
 
 PLATFORM="$(uname)"
-function cppwd {
+function cpcwd {
     if [[ "$PLATFORM" == "Linux" && "$XDG_SESSION_TYPE" == "wayland" ]]; then
         if command -v wl-copy > /dev/null 2>&1; then
             echo -n $(pwd) | wl-copy
@@ -67,6 +67,15 @@ function evoke {
     fi
 }
 
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
+
 function justemplate {
     if [ ! -f .justfile ]; then cat << EOF > .justfile
 [private]
@@ -82,6 +91,12 @@ EOF
 
 eval "$(starship init zsh)"
 
+# macOS specific
 if [[ "$OSTYPE" == darwin* ]]; then
     export PATH="/opt/homebrew/opt/macos-trash/bin:$PATH"
+fi
+
+# Linux specific
+if [[ "$OSTYPE" == linux-gnu* ]]; then
+    export PATH=/home/toroidalfox/.opencode/bin:$PATH
 fi

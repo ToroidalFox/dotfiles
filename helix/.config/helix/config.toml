@@ -52,6 +52,7 @@ C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 "space" = { c = { w = ":write-buffer-close", c = ":buffer-close" } }
+"tab" = "flip_selections"
 
 [keys.select]
 # d = "delete_selection_noyank"
@@ -62,6 +63,7 @@ C-u = ["half_page_up", "goto_window_center"]
 C-d = ["half_page_down", "goto_window_center"]
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+"tab" = "flip_selections"
 
 [keys.insert]
 C-h = "move_char_left"

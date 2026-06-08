@@ -60,3 +60,18 @@ boot-macos:
 boot-asahi:
 	sudo bless -mount /Volumes/Fedora Asahi Remix -setBoot
 	sudo shutdown -r now
+
+[linux]
+imedit:
+	hx .gtkrc-2.0
+	hx .config/gtk-3.0/settings.ini
+	hx .config/gtk-4.0/settings.ini
+	hx .config/plasma-workspace/env/input-method.sh
+
+[linux]
+enablesm:
+	kscreen-doctor output.72d5ad12-65fb-420c-a7c6-f7329cadf8e3.enable
+
+[linux]
+disablesm:
+	kscreen-doctor output.72d5ad12-65fb-420c-a7c6-f7329cadf8e3.disable

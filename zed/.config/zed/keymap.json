@@ -68,4 +68,16 @@
       "ctrl-t": ["task::Spawn", { "task_name": "open-project-in-alacritty" }],
     },
   },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "z f": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z a": "editor::ToggleFold"
+    }
+  }
 ]
