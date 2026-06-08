@@ -7,18 +7,27 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-`": ["task::Spawn", { "task_name": "terminal" }],
-    },
-  },
-  {
     "context": "(vim_mode == insert) && !menu",
     "bindings": {
       "ctrl-c": "vim::ToggleComments",
       "ctrl-p": "editor::Paste",
       "ctrl-h": "vim::Left",
       "ctrl-l": "vim::Right",
+    },
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "bindings": {
+      "g i": "editor::GoToImplementation",
+    },
+  },
+  // {
+  // "context": "(vim_mode == helix_normal) && !menu",
+  // }
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g r i": "editor::GoToImplementation",
     },
   },
   {
@@ -40,12 +49,6 @@
     },
   },
   {
-    "context": "Workspace && !Terminal",
-    "bindings": {
-      "cmd-a": "agent::ToggleFocus",
-    },
-  },
-  {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "unbind": {
       "g t": "vim::GoToTab",
@@ -54,6 +57,15 @@
     "bindings": {
       "cmd-k": "vim::GoToTab",
       "cmd-j": "vim::GoToPreviousTab",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-t": "editor::Transpose",
+    },
+    "bindings": {
+      "ctrl-t": ["task::Spawn", { "task_name": "open-project-in-alacritty" }],
     },
   },
 ]

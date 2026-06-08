@@ -35,6 +35,7 @@ args = ["--login"]
 program = "/bin/zsh"
 
 [window]
+option_as_alt = "Both"
 decorations = "full"
 dynamic_padding = true
 opacity = 1
@@ -46,4 +47,4 @@ columns = 110
 lines = 36
 
 [keyboard]
-bindings = [{key = "Q", mods = "Control", action = "Quit"}]
+bindings = [{ key = "Q", mods = "Control", action = "Quit" }]

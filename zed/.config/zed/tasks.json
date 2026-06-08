@@ -3,13 +3,13 @@
 // Example:
 [
   {
-    "label": "terminal",
-    "shell": "system",
-    "command": "$SHELL",
-    "use_new_terminal": true,
+    "label": "open-project-in-alacritty",
+    "command": "alacritty",
+    "args": ["--working-directory=$ZED_WORKTREE_ROOT"],
     "allow_concurrent_runs": true,
-    "reveal_target": "center",
+    "reveal": "never",
     "hide": "always",
+    "shell": "system",
   },
   {
     "label": "Example task",

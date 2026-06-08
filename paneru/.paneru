@@ -1,8 +1,9 @@
 [options]
 focus_follows_mouse = false
 mouse_follows_focus = false
-preset_column_widths = [0.33, 0.5, 0.75, 0.96]
-animation_speed = 60
+preset_column_widths = [0.10, 0.33, 0.5, 0.75, 0.96]
+animation_speed = 40
+# animation_speed = 99999999
 silver_width = 2
 silver_height = 1.0
 auto_center = true
@@ -26,16 +27,24 @@ radius = "auto"
 opacity = -0.08
 
 [bindings]
-window_focus_west = ["alt - a"]
-window_focus_east = ["alt - d"]
-window_swap_west = ["alt + shift - a"]
-window_swap_east = ["alt + shift - d"]
-window_swap_north = "alt + shift - w"
-window_swap_south = "alt + shift - s"
+# window_focus_west = ["alt - h", "alt - s"]
+# window_focus_east = ["alt - l", "alt - f"]
+# window_swap_west = ["alt + shift - h", "alt + shift - s"]
+# window_swap_east = ["alt + shift - l", "alt + shift - f"]
+# window_swap_north = ["alt + shift - k", "alt + shift + e"]
+# window_swap_south = ["alt + shift - j", "alt + shift + d"]
+window_focus_west = "alt - h"
+window_focus_east = "alt - l"
+window_focus_north = "alt - k"
+window_focus_south = "alt - j"
+window_swap_west = "alt + shift - h"
+window_swap_east = "alt + shift - l"
+window_swap_north = "alt + shift - k"
+window_swap_south = "alt + shift - j"
 window_stack = ["alt - g"]
 window_unstack = ["alt + shift - g"]
-window_resize = "alt - r"
-window_shrink = "alt + shift - r"
+window_resize = ["alt - r"]
+window_shrink = ["alt + shift - r"]
 window_fullwidth = ["alt - m"]
 window_center = ["alt - z", "alt - o"]
 window_manage = ["alt - f"]
@@ -50,7 +59,7 @@ title = "Picture-in-Picture"
 bundle_id = "app.zen-browser.zen"
 floating = true
 
-[windows.keepassxc]
-title = ".*"
-bundle_id = "org.keepassxc.keepassxc"
-floating = false
+# [windows.keepassxc]
+# title = ".*"
+# bundle_id = "org.keepassxc.keepassxc"
+# floating = false

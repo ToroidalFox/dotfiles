@@ -58,5 +58,5 @@ boot-macos:
 [macos]
 [confirm]
 boot-asahi:
-	sudo bless -mount /Volumes/Fedora\ Asahi -setBoot
+	sudo bless -mount /Volumes/Fedora Asahi Remix -setBoot
 	sudo shutdown -r now
