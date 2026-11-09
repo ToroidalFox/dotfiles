@@ -40,7 +40,7 @@ alias ela="eza -la"
 alias zj="zellij"
 alias ff="fastfetch"
 
-export EDITOR=hx
+export EDITOR=ms
 # export VISUAL=bat
 
 export BAT_THEME="OneHalfLight"
@@ -91,6 +91,9 @@ EOF
 
 eval "$(starship init zsh)"
 
+export PATH="$HOME/.local/bin:$PATH"
+export SSH_SK_HELPER="/mnt/c/Windows/System32/OpenSSH/ssh-sk-helper.exe"
+
 # macOS specific
 if [[ "$OSTYPE" == darwin* ]]; then
     export PATH="/opt/homebrew/opt/macos-trash/bin:$PATH"
@@ -98,5 +101,5 @@ fi
 
 # Linux specific
 if [[ "$OSTYPE" == linux-gnu* ]]; then
-    export PATH=/home/toroidalfox/.opencode/bin:$PATH
+    export PATH="$HOME/.opencode/bin:$PATH"
 fi
