@@ -127,7 +127,7 @@ taskbar_buttons = "hide_inactive_workspaces"
 
 # Expel window to a new column
 # "Ctrl+Alt+Shift+[" = "expel_to_left"
-"Ctrl+Shift+G" = "expel_to_right"
+"Win+Shift+G" = "expel_to_right"
 
 # Stack the neighbor's window into the focused column
 # "Ctrl+Alt+," = "consume_from_left"
