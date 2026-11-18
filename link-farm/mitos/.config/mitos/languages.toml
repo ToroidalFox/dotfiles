@@ -1,0 +1,55 @@
+[[language]]
+name = "rust"
+
+# if tailwind with rust,
+# language-servers = ["rust-analyzer", "tailwindcss-ls"]
+# [language-server.tailwindcss-ls]
+# config = { userLanguages = { rust = "html", "*.rs" = "html" } }
+
+# if leptos,
+# [language-server.rust-analyzer]
+# config = { procMacro = { ignored = { leptos_macro = [
+#   "component",
+#   "server",
+# ] } } }
+
+[language.auto-pairs]
+'(' = ")"
+'{' = '}'
+'[' = ']'
+
+[[language]]
+name = "css"
+language-servers = [
+  "vscode-css-language-server",
+  # "tailwindcss-ls",
+]
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["ruff", { name = "pyright", except-features = ["format"] }]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "toml"
+auto-format = true
+roots = ["."]
+language-servers = ["taplo"]
+
+[[language]]
+name = "c"
+formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
+auto-format = true
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format", args = ["-style=llvm", "-"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["markdown-oxide"]
