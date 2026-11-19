@@ -1,6 +1,7 @@
-theme = "onelight"
+theme = "onelight-transparent"
 
 [editor]
+# welcome-screen = false
 true-color = true
 line-number = "relative"
 idle-timeout = 0
@@ -8,7 +9,7 @@ color-modes = true
 auto-format = true
 
 [editor.statusline]
-left = ["spinner", "file-name"]
+left = ["mode", "activity", "file-name", "read-only-indicator", "file-modification-indicator"]
 # center = ["mode"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
