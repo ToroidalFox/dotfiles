@@ -11,7 +11,7 @@
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref-latest";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     mitos = {
       url = "github:mitos-editor/mitos";
@@ -22,42 +22,36 @@
   outputs = { nixpkgs, home-manager, nix-darwin, ... }@inputs:
   let
     username = "toroidalfox";
-
-    profiles = {
+    arches = ["x86_64" "aarch64"];
+    presets = {
       min = { development = false; desktop = false; };
       dev = { development = true; desktop = false; };
       full = { development = true; desktop = true; };
     };
 
-    mkHome = { system, profile }:
+    mkLinuxHome = { system, preset }:
+    let
+      isLinux = true;
+      isDarwin = false;
+    in
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
         };
         extraSpecialArgs = {
-          inherit inputs username profile;
-          isLinux = nixpkgs.lib.hasSuffix "-linux" system;
-          isDarwin = nixpkgs.lib.hasSuffix "-darwin" system;
+          inherit inputs username isLinux isDarwin;
         };
         modules = [
           ./modules/common.nix
-          ./modules/development.nix
-        #   ./home/desktop.nix
-        ] ++ nixpkgs.lib.optionals (nixpkgs.lib.hasSuffix "-linux" system) [
           ./modules/linux.nix
-        # ] ++ nixpkgs.lib.optionals (nixpkgs.lib.hasSuffix "-darwin" system) [
-        #   ./home/darwin.nix
+        ] ++ nixpkgs.lib.optionals preset.development [
+          ./modules/development.nix
+        ] ++ nixpkgs.lib.optionals preset.desktop [
+          ./modules/desktop-linux.nix
+          inputs.nix-flatpak.homeManagerModules.nix-flatpak
         ];
       };
-
-    mkLinuxHomes = { system, archAlias }:
-      nixpkgs.lib.mapAttrs' (name: profile: {
-        name = "linux-${archAlias}-${name}";
-        value = mkHome {
-          inherit system profile;
-        };
-      }) profiles;
 
     /*
     mkDarwin = { profileName, profile }:
@@ -91,15 +85,15 @@
         ];
       }; */
   in {
-    homeConfigurations =
-      (mkLinuxHomes {
-        system = "x86_64-linux";
-        archAlias = "x8";
-      }) //
-      (mkLinuxHomes {
-        system = "aarch64-linux";
-        archAlias = "a8";
-      });
+    homeConfigurations = nixpkgs.lib.listToAttrs (nixpkgs.lib.concatMap (arch:
+      nixpkgs.lib.mapAttrsToList(configName: preset: {
+        name = "linux-${arch}-${configName}";
+        value = mkLinuxHome {
+          system = "${arch}-linux";
+          inherit preset;
+        };
+      }) presets
+    ) arches);
     /*
     darwinConfigurations = {
     }; */

@@ -6,17 +6,15 @@ default:
 edit:
     @$EDITOR .justfile
 
-[arg('arch', pattern='x8|a8')]
 [arg('name', pattern='min|dev|full')]
 [linux]
-switch name arch:
-    home-manager switch --flake .#linux-{{ arch }}-{{ name }} --option warn-dirty false
+switch name:
+    home-manager switch --flake .#linux-{{ arch() }}-{{ name }} --option warn-dirty false
 
-[arg('arch', pattern='x8|a8')]
 [arg('name', pattern='min|dev|full')]
-[linux]
-init name arch:
-    nix run home-manager/release-26.05 -- switch --flake .#linux-{{ arch }}-{{ name }} --option warn-dirty false
+[macos]
+init name:
+    nix run home-manager/release-26.05 -- switch --flake .#darwin-{{ arch() }}-{{ name }} --option warn-dirty false
 
 [linux]
 set-shell shell:
