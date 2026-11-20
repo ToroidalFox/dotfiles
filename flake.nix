@@ -11,6 +11,7 @@
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref-latest";
 
     mitos = {
       url = "github:mitos-editor/mitos";
@@ -43,8 +44,8 @@
           ./modules/common.nix
           ./modules/development.nix
         #   ./home/desktop.nix
-        # ] ++ nixpkgs.lib.optionals (nixpkgs.lib.hasSuffix "-linux" system) [
-        #   ./home/linux.nix
+        ] ++ nixpkgs.lib.optionals (nixpkgs.lib.hasSuffix "-linux" system) [
+          ./modules/linux.nix
         # ] ++ nixpkgs.lib.optionals (nixpkgs.lib.hasSuffix "-darwin" system) [
         #   ./home/darwin.nix
         ];
