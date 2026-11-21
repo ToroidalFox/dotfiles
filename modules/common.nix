@@ -112,6 +112,9 @@ EOF
   programs.zellij = {
     enable = true;
     settings = {
+      pane_frames = false;
+      default_shell = "zsh";
+      copy_on_select = false;
       keybinds._props.clear-defaults = true;
       keybinds._children = [
           {shared_except = {_args = ["locked"]; _children = [
@@ -140,7 +143,7 @@ EOF
 
           # locked mode
           {locked._children = [
-              {bind = {_args = ["Ctrl Shift l"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["Ctrl Shift l"]; SwitchToMode = "Normal";};}
           ];}
 
           # resize mode
@@ -148,19 +151,37 @@ EOF
             {bind = {_args = ["Ctrl Shift r"]; SwitchToMode = "Resize";};}
           ];};}
           {resize._children = [
-              {bind = {_args = ["Ctrl Shift r"]; SwitchToMode = "Normal";};}
-              {bind = {_args = ["h" "Left"]; Resize = "Increase Left";};}
-              {bind = {_args = ["l" "Right"]; Resize = "Increase Right";};}
-              {bind = {_args = ["j" "Down"]; Resize = "Increase Down";};}
-              {bind = {_args = ["k" "Up"]; Resize = "Increase Up";};}
+            {bind = {_args = ["Ctrl Shift r"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["h" "Left"]; Resize = "Increase Left";};}
+            {bind = {_args = ["l" "Right"]; Resize = "Increase Right";};}
+            {bind = {_args = ["j" "Down"]; Resize = "Increase Down";};}
+            {bind = {_args = ["k" "Up"]; Resize = "Increase Up";};}
           ];}
 
-          # pane mode
+          # pane mode (not done)
           {shared_except = {_args = ["pane" "locked"]; _children = [
             {bind = {_args = ["Ctrl Shift p"]; SwitchToMode = "Pane";};}
           ];};}
           {pane._children = [
-              {bind = {_args = ["Ctrl Shift p"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["Ctrl Shift p"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["h" "Left"]; MoveFocus = "Left";};}
+            {bind = {_args = ["l" "Right"]; MoveFocus = "Right";};}
+            {bind = {_args = ["j" "Down"]; MoveFocus = "Down";};}
+            {bind = {_args = ["k" "Up"]; MoveFocus = "Up";};}
+            {bind = {_args = ["p"]; SwitchFocus = {};};}
+            {bind = {_args = ["p"]; _children = [{NewPane = {};} {SwitchToMode = "Normal";}];};}
+            {bind = {_args = ["f"]; _children = [{ToggleFocusFullscreen = {};} {SwitchToMode = "Normal";}];};}
+          ];}
+
+          # tab mode
+          {shared_except = {_args = ["tab" "locked"]; _children = [
+            {bind = {_args = ["Ctrl Shift t"]; SwitchToMode = "Tab";};}
+          ];};}
+          {tab._children = [
+            {bind = {_args = ["Ctrl" "Shift" "t"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["n"]; _children = [{NewTab = {};} {SwitchToMode = "Normal";}];};}
+            {bind = {_args = ["x"]; _children = [{CloseTab = {};} {SwitchToMode = "Normal";}];};}
+            {bind = {_args = ["Tab"]; ToggleTab = {};};}
           ];}
       ];
     };

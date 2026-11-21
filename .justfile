@@ -8,13 +8,13 @@ edit:
 
 [arg('name', pattern='min|dev|full')]
 [linux]
-switch name:
+switch name="full":
     home-manager switch --flake .#linux-{{ arch() }}-{{ name }} --option warn-dirty false
 
 [arg('name', pattern='min|dev|full')]
 [macos]
-init name:
-    nix run home-manager/release-26.05 -- switch --flake .#darwin-{{ arch() }}-{{ name }} --option warn-dirty false
+switch name:
+    home-manager switch --flake .#darwin-{{ arch() }}-{{ name }} --option warn-dirty false
 
 [linux]
 set-shell shell:

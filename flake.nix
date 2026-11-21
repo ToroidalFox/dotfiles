@@ -43,13 +43,13 @@
           inherit inputs username isLinux isDarwin;
         };
         modules = [
+          inputs.nix-flatpak.homeManagerModules.nix-flatpak
           ./modules/common.nix
           ./modules/linux.nix
         ] ++ nixpkgs.lib.optionals preset.development [
           ./modules/development.nix
         ] ++ nixpkgs.lib.optionals preset.desktop [
           ./modules/desktop-linux.nix
-          inputs.nix-flatpak.homeManagerModules.nix-flatpak
         ];
       };
 
