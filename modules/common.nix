@@ -178,7 +178,7 @@ EOF
             {bind = {_args = ["Ctrl Shift t"]; SwitchToMode = "Tab";};}
           ];};}
           {tab._children = [
-            {bind = {_args = ["Ctrl" "Shift" "t"]; SwitchToMode = "Normal";};}
+            {bind = {_args = ["Ctrl Shift t"]; SwitchToMode = "Normal";};}
             {bind = {_args = ["n"]; _children = [{NewTab = {};} {SwitchToMode = "Normal";}];};}
             {bind = {_args = ["x"]; _children = [{CloseTab = {};} {SwitchToMode = "Normal";}];};}
             {bind = {_args = ["Tab"]; ToggleTab = {};};}
