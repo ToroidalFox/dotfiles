@@ -18,7 +18,9 @@ in
     bat
     git
     jujutsu
+    jjui
     just
+    just-lsp
     zellij
     fastfetch
     yubikey-manager
@@ -32,6 +34,7 @@ in
     inputs.mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
+  home.sessionPath = ["~/.local/bin"];
   home.file.".justfile".source = link-farm "just-home/.justfile";
   home.file.".config/mitos".source = link-farm "mitos/.config/mitos";
   home.sessionVariables = {
@@ -41,6 +44,7 @@ in
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
+    autosuggestion.strategy = ["completion" "history"];
     syntaxHighlighting.enable = true;
 
     history = {
@@ -59,6 +63,7 @@ in
       el = "eza -l";
       ela = "eza -la";
       zj = "zellij";
+      ji = "jjui";
       ff = "fastfetch";
     };
 
@@ -77,6 +82,9 @@ EOF
       '';
     };
     initContent = ''
+      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+      zmodload zsh/zpty
+
       if command -v systemd-detect-virt >/dev/null 2>&1 &&
         [ "$(systemd-detect-virt)" = "wsl" ]; then
         export SSH_SK_HELPER="/mnt/c/Windows/System32/OpenSSH/ssh-sk-helper.exe"
