@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     tombi
     # opencode
+    rtk
     vscode-langservers-extracted
     ruff
     rustup
