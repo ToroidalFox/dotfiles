@@ -88,6 +88,7 @@ EOF
       if command -v systemd-detect-virt >/dev/null 2>&1 &&
         [ "$(systemd-detect-virt)" = "wsl" ]; then
         export SSH_SK_HELPER="/mnt/c/Windows/System32/OpenSSH/ssh-sk-helper.exe"
+        export BROWSER="explorer.exe"
       fi
     '';
   };
