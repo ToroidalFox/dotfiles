@@ -77,6 +77,6 @@ ghrk id:
     Host gh{{ id }}
         User git
         HostName github.com
-        IdentityFile $TARGET_HOME/.ssh/$KEY_NAME
+        IdentityFile ~/.ssh/$KEY_NAME
         IdentitiesOnly yes
     EOF
